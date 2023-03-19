@@ -1,0 +1,17 @@
+custom_ads_expire:
+   class: 'BxBlockCustomAds::CustomAdsExpireWorker'
+   cron: '*/1 * * * *'
+
+add_battery_percentage:
+   class: 'AccountBlock::AddBatteryPercentageWorker'
+   # cron: '0 0 * * *'
+   cron: '57 7 * * *'
+
+award_badges:
+   class: 'BxBlockGamification::BadgeWorker'
+   cron: '10 8 * * *'
+
+daily_reminder_job:
+   class: 'BxBlockNotification::ReminderNotificationWorker'
+   cron: '/1 * * * *'
+
